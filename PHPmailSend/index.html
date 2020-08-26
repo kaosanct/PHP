@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- charset 설정 -->
+    <meta charset="UTF-8">
+    <!-- ie 호환성보기 무시 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일을 위한 viewport설정 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Email Form</title>
+    <style>
+      .email_form input[type=text],
+      .email_form select,
+      .email_form textarea,
+      .email_form input[type=email],
+      .email_form input[type=tel] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      .email_form>h3 {
+        text-align: center;
+      }
+      
+      .email_form textarea {
+        height: 200px;
+        resize: none;
+      }
+      
+      .email_form input[type=submit] {
+        background-color: #737373;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      .email_form input[type=submit]:hover {
+        background-color: #aaa;
+      }
+      
+      .email_form {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      
+      .email_form>h3 {
+        font-size: 30px;
+        padding-bottom: 50px;
+      }
+ 
+    </style>
+  </head>
+ 
+  <body>
+    <!-- 폼태그 -->
+    <section class="email_form" id="email_form">
+      <h3>Email Form</h3>
+      <form action="index.php" method="post">
+        <label for="from">From (required)</label>
+        <input type="email" id="from" name="from" placeholder="from" autocomplete="on" required>
+        <label for="to">To (required)</label>
+        <input type="text" id="to" name="to" placeholder="to" autocomplete="on" required>
+        
+        <label for="cc">CC </label>
+        <input type="text" id="cc" name="cc" placeholder="cc">
+        
+        <label for="subject">Subject </label>
+        <input type="text" id="subject" name="subject" placeholder="subject" required>
+        
+        <label for="content">contents (required)</label>
+        <textarea id="content" name="content" placeholder="content" required></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </section>
+  </body>
+ 
+</html>
+
